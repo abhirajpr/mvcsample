@@ -17,14 +17,19 @@ namespace CodeFirstMVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult create(Student obj)
+        public ActionResult CreateUser()
         {
             StudentDbContext db = new StudentDbContext();
-            db.Students.Add(obj);
+            Student st = new Student();
+            UpdateModel(st);
+            db.Students.Add(st);
             db.SaveChanges();
 
             return RedirectToAction("Index");
         }
+
+
+
 
         public ActionResult Index()
         {
