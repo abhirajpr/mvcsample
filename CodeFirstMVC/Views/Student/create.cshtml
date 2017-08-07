@@ -1,0 +1,51 @@
+﻿@model CodeFirstMVC.Models.Student
+@{
+    ViewBag.Title = "create";
+}
+
+<h2>create</h2>
+
+@*@using (Html.BeginForm("Stud", "create", FormMethod.Post))
+{*@
+
+<form method="post">
+    <table>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Name)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Name)
+                @*@Html.ValidationMessageFor(m => m.Name)*@
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Email)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Email)
+                @*@Html.ValidationMessageFor(m => m.Email)*@
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Age)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.Age)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit" id="submit">Submit</button>
+                @*<input type="submit" name="Submit" title="submit" />*@
+            </td>
+        </tr>
+
+
+    </table>
+</form>
+@*}*@
