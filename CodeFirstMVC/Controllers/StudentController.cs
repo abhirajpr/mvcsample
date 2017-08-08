@@ -73,5 +73,13 @@ namespace CodeFirstMVC.Controllers
             return RedirectToAction("Index");
 
         }
+
+        public ActionResult details(int id)
+        {
+            //StudentDbContext dbContext = new StudentDbContext();
+            //Student employee = dbContext.Students.Where(c => c.ID == id).FirstOrDefault();
+
+            return View();
+        }
     }
 }
