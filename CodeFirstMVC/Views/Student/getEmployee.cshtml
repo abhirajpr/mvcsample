@@ -1,0 +1,26 @@
+﻿@model IEnumerable<CodeFirstMVC.Models.Student>
+
+@{
+    ViewBag.Title = "getEmployee";
+}
+
+<h2>Employee</h2>
+<button id="id1">Submit</button>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $(document).ready(function(){
+     $('#id1').click(function(){
+         $.ajax({
+             url:'@Url.Action("PartialEmployee", "Student")',
+             type:"GET",
+             success: function(data){
+                 $('#id2').html(data);
+             }
+              
+         })
+    })
+    })
+</script>
+<div id="id2">
+
+</div>

@@ -100,6 +100,14 @@ namespace CodeFirstMVC.Controllers
         {
             return View();
         }
+
+        public ActionResult PartialEmployee()
+        {
+
+            StudentDbContext dbContext = new StudentDbContext();
+            List<Student> employess = dbContext.Students.ToList();
+            return PartialView("PartialEmployee",employess);
+        }
     }
 
 

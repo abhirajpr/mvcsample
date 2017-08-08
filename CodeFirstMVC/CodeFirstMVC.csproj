@@ -252,6 +252,8 @@
     <Content Include="Views\Student\edit.cshtml" />
     <Content Include="Views\Student\details.cshtml" />
     <Content Include="Views\Student\create1.cshtml" />
+    <Content Include="Views\Student\getEmployee.cshtml" />
+    <Content Include="Views\Student\PartialEmployee.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
