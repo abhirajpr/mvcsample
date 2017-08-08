@@ -11,23 +11,36 @@ namespace CodeFirstMVC.Controllers
     public class StudentController : Controller
     {
         // GET: Student
+
+        public ActionResult create1()
+        {
+            return View();
+        }
+
         public ActionResult create()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult CreateUser()
+        //public ActionResult CreateUser()
+        //{
+        //    StudentDbContext db = new StudentDbContext();
+        //    Student st = new Student();
+        //    UpdateModel(st);
+        //    db.Students.Add(st);
+        //    db.SaveChanges();
+
+        //    return RedirectToAction("Index");
+        //}
+        public ActionResult create1(Student obj)
         {
             StudentDbContext db = new StudentDbContext();
-            Student st = new Student();
-            UpdateModel(st);
-            db.Students.Add(st);
+            db.Students.Add(obj);
             db.SaveChanges();
 
             return RedirectToAction("Index");
         }
-
 
 
 
@@ -81,5 +94,13 @@ namespace CodeFirstMVC.Controllers
 
             return View();
         }
+
+
+        public ActionResult getEmployee()
+        {
+            return View();
+        }
     }
+
+
 }
